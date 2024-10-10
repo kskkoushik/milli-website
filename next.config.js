@@ -1,13 +1,11 @@
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/milli-website",
-  assetPrefix: "/milli-website/",
   output: "export",
-  distDir: "dist",
+  assetPrefix: "/milli-website/",
+  basePath: "/milli-website",
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "/my-loader.ts",
   },
 };
 
